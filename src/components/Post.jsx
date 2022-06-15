@@ -75,12 +75,26 @@ return (
         />
         </form>
         
+   </div>
+        
+        <form className={styles.commentForm}>
+          <strong>
+            Deixe seu FeedBack
+          </strong>
+
+          <textarea 
+            placeholder='deixe um comentário'
+          />
+
+        <button className={styles.comment} type="submit">Comentar</button>
+
+        </form>
+
         <footer>
           <button className={styles.commentFormButton} type="submit">Salvar</button>
+
         </footer>
 
-   </div>
-  
 
  </article>
 )
