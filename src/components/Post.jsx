@@ -1,13 +1,15 @@
 import { Comment } from './Comment'
 import styles from './Post.module.css'
 
-export function Post(){
+export function Post(props){
+
+  console.log(props);
+
 return (
  <article className={styles.post}>
    {/* cabeçalho do componente */}
    <header>
      <div className={styles.insured}>
-            {/* <img className={styles.insuredAvatar} src="https://github.com/lucasbarrossantos.png" /> */}
             <h1>Laudo de Perícia Médica</h1>
             <time 
             title="09 de Junho às 08:11h"

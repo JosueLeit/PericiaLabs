@@ -5,6 +5,41 @@ import { SideBar } from "./components/SideBar";
 import './global.css'
 
 
+//author: {avatar_url: "",role:""}
+//publishedAt: Date
+//content: String
+
+const posts=[
+  {
+    id:1,
+    author: {
+      avatarUrl: "https://github.com/josueleit.png",
+      name: "Josué Leite",
+      role: "Desenvolvedor"
+    },
+    content: [
+      {type: 'paragraph', content:'teste de conteudo'},
+      {type: 'paragraph', content:'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW return'},
+      {type: 'link', content: 'www.arrumae.com'}
+    ],
+    publishedAt: new Date('2022-05-03 20:03:05'),
+  },
+
+  {
+    id:2,
+    author: {
+      avatarUrl: "https://github.com/maykbrito.png",
+      name: "Mayk Brito",
+      role: "CTO @Rocketseat"
+    },
+    content: [
+      {type: 'paragraph', content:'teste de conteudo'},
+      {type: 'paragraph', content:'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW return'},
+      {type: 'link', content: 'www.arrumae.com'}
+    ],
+    publishedAt: new Date('2022-10-02 10:30:50'),
+  },
+]
 
 export default function App() {
   
@@ -15,14 +50,14 @@ export default function App() {
           <SideBar />
       <main>
       
-      <Post
-        author="João Nicolle"
-        content="Práticas Previdenciárias na visão do Perito"
-      />
-      {/* <Post
-        author="Rodrigo Souza"
-        content="Qualidade das perícias previdenciárias como forma de evitar o retrabalho e reduzir as filas de atendimento "
-      /> */}
+      {posts.map(post =>{
+        return 
+          (<Post 
+          author={post.author}
+          content={post.content}
+          publishedAt={post.publishedAt}
+          />)
+      })}
 
       </main>
     </div>
