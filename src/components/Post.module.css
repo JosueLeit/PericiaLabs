@@ -165,3 +165,22 @@
   line-height: 1.4;
   margin-top: 1rem;
 }
+
+  .commentButton[type=submit] {
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 0;
+    background: var(--green-500);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .commentButton[type=submit]:hover{
+    background-color: var(--green-300);
+  }
+
+  .commentList{
+    margin-top: 2rem;
+  }
